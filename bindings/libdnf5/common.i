@@ -165,6 +165,7 @@ del ClassName##__iter__
 %enddef
 
 %{
+    #include "libdnf5/common/sack/exclude_flags.hpp"
     #include "libdnf5/common/sack/query.hpp"
     #include "libdnf5/common/sack/query_cmp.hpp"
     #include "libdnf5/common/sack/sack.hpp"
@@ -176,6 +177,7 @@ del ClassName##__iter__
 %ignore libdnf5::Set::Set;
 %ignore libdnf5::sack::operator|(QueryCmp lhs, QueryCmp rhs);
 %ignore libdnf5::sack::operator&(QueryCmp lhs, QueryCmp rhs);
+%include "libdnf5/common/sack/exclude_flags.hpp"
 %include "libdnf5/common/sack/query_cmp.hpp"
 %include "libdnf5/common/sack/query.hpp"
 %include "libdnf5/common/sack/sack.hpp"
